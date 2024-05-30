@@ -95,23 +95,32 @@ def order(sentence):
 </details>
 
 ---
-<!--
+
 <details>
-<summary>Placeholder</summary>
+<summary>Build a pile of Cubes</summary>
    
-    asdf
-    asdf
+Your task is to construct a building which will be a pile of n cubes.
+The cube at the bottom will have a volume of n<sup>3</sup>, the cube above will have volume of (n-1)<sup>3</sup> and so on until the top which will have a volume of 1<sup>3</sup>
+
+You are given the total volume m of the building. Being given m can you find the number n of cubes you will have to build?
+
+The parameter of the function findNB (find_nb, fin-nb, findNB, ...) will be an integer m and you have to return the integer n such as n<sup>3</sup> + (n-1)<sup>3</sup> + (n-2)<sup>3</sup> + ... + 1<sup>3</sup> = m if such a n exists or -1 if there is no such n.
 
 > Examples<br>
-> asdf<br>
-> asdf<br>
-> asdf<br>
+> findNb(1071225) --> 45<br>
+> findNb(91716553919377) --> -1
 
 ***Solution:***
 ```python
-asdf
-asdf
-asdf
+def find_nb(mass):
+    count = 0
+    m=0
+    while m<mass:
+        count += 1
+        m += count**3
+        if m>mass:
+            return -1
+    return count
 ```
 </details>
 
